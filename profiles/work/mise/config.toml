@@ -24,6 +24,7 @@ uv = "latest"
 yamlfmt = "latest"
 yamllint = "latest"
 yq = "latest"
+zoxide = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["flutter"]
