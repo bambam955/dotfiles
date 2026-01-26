@@ -1,0 +1,32 @@
+[tools]
+actionlint = "latest"
+amp = "latest"
+bats = "latest"
+dua = "latest"
+flutter = "3.38.7-stable"
+fzf = "latest"
+github-cli = "latest"
+go = "latest"
+hadolint = "latest"
+just = "latest"
+node = "25.4.0"
+opencode = "latest"
+packer = "latest"
+pipx = "latest"
+"pipx:pre-commit" = "latest"
+prettier = "latest"
+ruff = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+"ubi:gitlab-org/cli" = { version = "latest", exe = "glab", provider = "gitlab" }
+usage = "latest"
+uv = "latest"
+yamlfmt = "latest"
+yamllint = "latest"
+yq = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["flutter"]
+
+[env]
+GOBIN = ""
