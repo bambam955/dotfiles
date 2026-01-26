@@ -27,14 +27,14 @@ print_error() {
 }
 
 print_warning() {
-	echo -e "${YELLOW}!${NC} $1"
+	echo -e "${YELLOW}! $1${NC}" >&2
 }
 
 # Function to validate profile
 validate_profile() {
 	local profiles_list
 	profiles_list=$(find "${SCRIPT_DIR}/profiles" -maxdepth 1 -type d -not -path "${SCRIPT_DIR}/profiles" -exec basename {} \; | tr '\n' ' ') || true
-	
+
 	if [[ -z "${PROFILE}" ]]; then
 		print_error "No profile specified"
 		print_error "Usage: $0 [ ${profiles_list}]"
@@ -59,9 +59,15 @@ symlink_file() {
 	backup_date="$(date +%Y%m%d-%H%M%S)"
 	backup_dir="${HOME_DIR}/.backups/${backup_date}"
 
-	if [[ -e "${dest}" ]]; then
-		if [[ -L "${dest}" ]]; then
-			# It's already a symlink
+	if [[ -e "${dest}" ]] && [[ ! -L "${dest}" ]]; then
+		# It's a regular file, back it up
+		backup_path="${backup_dir}${dest}"
+		mkdir -p "$(dirname "${backup_path}")"
+		print_warning "Backing up existing file: ${dest} -> .backups/${backup_date}${dest}"
+		mv "${dest}" "${backup_path}"
+	elif [[ -L "${dest}" ]]; then
+		if [[ -e "${dest}" ]]; then
+			# It's already a symlink to an existing file
 			local link_target
 			link_target="$(readlink "${dest}")" || true
 			if [[ "${link_target}" == "${src}" ]]; then
@@ -72,11 +78,9 @@ symlink_file() {
 				rm "${dest}"
 			fi
 		else
-			# It's a regular file, back it up
-			backup_path="${backup_dir}${dest}"
-			mkdir -p "$(dirname "${backup_path}")"
-			print_warning "Backing up existing file: ${dest} -> .backups/${backup_date}${dest}"
-			mv "${dest}" "${backup_path}"
+			# Broken symlink
+			print_warning "Symlink exists but points to invalid location: ${dest}"
+			rm "${dest}"
 		fi
 	fi
 
@@ -132,12 +136,10 @@ main() {
 
 	# Bash config directory
 	mkdir -p "${HOME_DIR}/.config/bash"
-	symlink_file "${SCRIPT_DIR}/bash/config/core.bash" "${HOME_DIR}/.config/bash/core.bash"
-	symlink_file "${SCRIPT_DIR}/bash/config/prompt.bash" "${HOME_DIR}/.config/bash/prompt.bash"
-	symlink_file "${SCRIPT_DIR}/bash/config/completion.bash" "${HOME_DIR}/.config/bash/completion.bash"
-	symlink_file "${SCRIPT_DIR}/bash/config/aliases.bash" "${HOME_DIR}/.config/bash/aliases.bash"
-	symlink_file "${SCRIPT_DIR}/bash/config/git-aliases.bash" "${HOME_DIR}/.config/bash/git-aliases.bash"
-	symlink_file "${SCRIPT_DIR}/bash/config/init.bash" "${HOME_DIR}/.config/bash/init.bash"
+	for config_file in "${SCRIPT_DIR}/bash/config"/*.bash "${SCRIPT_DIR}/profiles/${PROFILE}/bash"/*.bash; do
+		symlink_file "${config_file}" "${HOME_DIR}/.config/bash/$(basename "${config_file}")"
+	done
+	unset config_file
 	print_success "Bash configuration complete"
 
 	# Git configuration
