@@ -1,3 +1,15 @@
+#########################################################
+# ------------------ GENERAL ALIASES ------------------ #
+#########################################################
+
+alias rebash="source ~/.bashrc"
+alias j="goto"
+alias e="xdg-open"
+
+#########################################################
+# -------------------- GIT ALIASES -------------------- #
+#########################################################
+
 # Function to get the working branch in a git repository
 branchname() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/' || true
@@ -37,7 +49,7 @@ gcm() {
     git commit -m "$*"
 }
 gam() {
-    ga; gcm "$*"
+    ga && gcm "$*"
 }
 gph() {
     local branch
@@ -45,8 +57,8 @@ gph() {
     git push origin "${branch}"
 }
 gch() {
-    gcm "$*"; gph
+    gcm "$*" && gph
 }
 gah() {
-    ga; gcm "$*"; gph
+    ga && gcm "$*" && gph
 }

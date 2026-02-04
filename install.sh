@@ -135,7 +135,7 @@ main() {
 	symlink_file "${SCRIPT_DIR}/bash/.profile" "${HOME_DIR}/.profile"
 
 	# Bash config directory
-	mkdir -p "${HOME_DIR}/.config/bash"
+	rm -rf "${HOME_DIR}/.config/bash" && mkdir -p "${HOME_DIR}/.config/bash"
 	for config_file in "${SCRIPT_DIR}/bash/config"/*.bash "${SCRIPT_DIR}/profiles/${PROFILE}/bash"/*.bash; do
 		symlink_file "${config_file}" "${HOME_DIR}/.config/bash/$(basename "${config_file}")"
 	done
