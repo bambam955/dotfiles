@@ -17,3 +17,13 @@ add_to_path() {
 
 # Set up Golang PATH dir
 gopath="$(go env GOPATH)" && [[ -n $gopath && ":$PATH:" != *":$gopath/bin:"* ]] && PATH="$gopath/bin:$PATH" && unset gopath
+
+# Set up Android PATH dirs
+ANDROID_HOME="${HOME}/Android/Sdk"
+if [[ -d "${ANDROID_HOME}" ]]; then
+    add_to_path "${ANDROID_HOME}/platform-tools"
+    add_to_path "${ANDROID_HOME}/cmdline-tools/latest/bin"
+    export ANDROID_HOME
+else
+    unset ANDROID_HOME
+fi
