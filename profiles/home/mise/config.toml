@@ -16,3 +16,6 @@ shellcheck = "latest"
 shfmt = "latest"
 uv = "latest"
 yamlfmt = "latest"
+
+[env]
+GOBIN = ""
