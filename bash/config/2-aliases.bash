@@ -6,6 +6,10 @@ alias rebash="source ~/.bashrc"
 alias j="goto"
 alias e="xdg-open"
 
+# Apps
+alias t="time-tracker"
+alias astudio="/opt/android-studio/bin/studio >/dev/null 2>&1 &"
+
 #########################################################
 # -------------------- GIT ALIASES -------------------- #
 #########################################################
