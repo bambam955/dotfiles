@@ -24,6 +24,7 @@ if [[ -d "${ANDROID_HOME}" ]]; then
     add_to_path "${ANDROID_HOME}/platform-tools"
     add_to_path "${ANDROID_HOME}/cmdline-tools/latest/bin"
     export ANDROID_HOME
+    export JAVA_HOME="/opt/android-studio/jbr"
 else
     unset ANDROID_HOME
 fi
