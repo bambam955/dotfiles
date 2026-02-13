@@ -14,6 +14,7 @@ add_to_path() {
         *) PATH="$1:$PATH" ;;       
     esac
 }
+export -f add_to_path
 
 # Set up Golang PATH dir
 gopath="$(go env GOPATH)" && [[ -n $gopath && ":$PATH:" != *":$gopath/bin:"* ]] && PATH="$gopath/bin:$PATH" && unset gopath

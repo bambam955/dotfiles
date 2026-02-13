@@ -16,6 +16,7 @@ sscp() {
 
 # Other apps
 alias qtc='~/Qt/Tools/QtCreator/bin/qtcreator . > /dev/null 2>&1 &'
+[[ -d "${HOME}/mrs-sdk-qt/tools" ]] && add_to_path "${HOME}/mrs-sdk-qt/tools"
 
 # VPN management
 VPN_CONFIG_FILE="${HOME}/Documents/important/sslvpn-bennett.moore@mrs-electronics.com-client-config.ovpn"
