@@ -66,3 +66,11 @@ gch() {
 gah() {
     ga && gcm "$*" && gph
 }
+
+# Delete all local branches that don't exist on the remote
+gbda() {
+    git fetch --prune
+    git branch -vv |
+        awk '/: gone]/{print $1}' |
+        xargs -r git branch -D
+}
