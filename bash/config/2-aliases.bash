@@ -35,7 +35,6 @@ alias gsr='git restore --staged .'
 alias gco='git checkout'
 alias gbd='git branch -D'
 alias gbm='git branch -m'
-alias gm='git merge'
 
 source ~/.local/bin/git-completion.bash
 __git_complete gco _git_checkout
@@ -67,6 +66,10 @@ gah() {
     ga && gcm "$*" && gph
 }
 
+gm() {
+    git merge -m "chore: merge branch '$1' into $(branchname)" $1
+}
+
 # Delete all local branches that don't exist on the remote
 gbda() {
     git fetch --prune
@@ -74,3 +77,4 @@ gbda() {
         awk '/: gone]/{print $1}' |
         xargs -r git branch -D
 }
+
