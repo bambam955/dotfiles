@@ -1,3 +1,5 @@
 [user]
 	email = bennett.moore@mrs-electronics.com
 	name = Bennett Moore
+[push]
+	autoSetupRemote = true
