@@ -5,6 +5,7 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(_
 source "${HOME}/.local/bin/goto.sh" || true
 eval "$("${HOME}/.local/bin/mise" activate --shims bash)" || true
 eval "$(fzf --bash)" || true
+eval "$(just --completions bash)" || true
 
 add_to_path() {
     case ":$PATH:" in
