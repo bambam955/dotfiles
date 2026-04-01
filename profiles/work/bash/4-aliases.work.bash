@@ -3,15 +3,15 @@ setupvcan() {
 }
 
 bsh() {
-  source ~/scripts/ssh.sh $*
+  source ~/scripts/ssh.sh "$*"
 }
 
 scanips() {
-  source ~/scripts/scanips.sh $*
+  source ~/scripts/scanips.sh "$*"
 }
 
 sscp() {
-  bash ~/scripts/scp.sh $*
+  bash ~/scripts/scp.sh "$*"
 }
 
 # Other apps
@@ -24,4 +24,4 @@ alias stopvpn='sudo openvpn3 session-manage --config "${VPN_CONFIG_FILE}" --disc
 
 # MRS SDK Qt config
 export MRS_SDK_QT_ROOT="${HOME}/mrs-sdk-qt"
-[[ -d "${HMRS_SDK_QT_ROOT}/tools" ]] && add_to_path "${MRS_SDK_QT_ROOT}/tools"
+[[ -d "${MRS_SDK_QT_ROOT}/tools" ]] && add_to_path "${MRS_SDK_QT_ROOT}/tools"
