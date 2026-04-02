@@ -20,6 +20,7 @@ ripgrep = "latest"
 ruff = "latest"
 shellcheck = "latest"
 shfmt = "latest"
+tmux = "latest"
 "ubi:gitlab-org/cli" = { version = "latest", exe = "glab", provider = "gitlab" }
 usage = "latest"
 uv = "latest"
