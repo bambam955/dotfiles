@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement GitHub Issue"
+  short_description: "Read issue, code, review, and open PR"
+  default_prompt: "Use $implement-github-issue to read a GitHub issue, implement it, review the diff, and open a pull request."

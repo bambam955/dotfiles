@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement GitLab Issue"
+  short_description: "Read issue, code, review, and open MR"
+  default_prompt: "Use $implement-gitlab-issue to read a GitLab issue, implement it, review the diff, and open a merge request."

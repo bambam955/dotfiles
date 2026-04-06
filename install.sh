@@ -88,6 +88,32 @@ symlink_file() {
 	ln -s "${src}" "${dest}"
 }
 
+# Install Codex skills by linking each repo-local skill directory into the
+# user's Codex skills directory. We link the skill directories themselves so
+# any nested files, scripts, or agents remain available exactly as stored here.
+install_codex_skills() {
+	local codex_skills_src="${SCRIPT_DIR}/codex/skills"
+	local codex_skills_dest="${HOME_DIR}/.codex/skills"
+	local skill_dir
+
+	if [[ ! -d "${codex_skills_src}" ]]; then
+		print_warning "No Codex skills directory found at ${codex_skills_src}"
+		return 0
+	fi
+
+	mkdir -p "${codex_skills_dest}"
+
+	for skill_dir in "${codex_skills_src}"/*; do
+		if [[ ! -d "${skill_dir}" ]]; then
+			continue
+		fi
+
+		symlink_file "${skill_dir}" "${codex_skills_dest}/$(basename "${skill_dir}")"
+	done
+
+	unset skill_dir
+}
+
 # Function to install mise if not already installed
 install_mise() {
 	if command -v mise &>/dev/null; then
@@ -161,6 +187,12 @@ main() {
 	mkdir -p "${HOME_DIR}/.local/bin"
 	symlink_file "${SCRIPT_DIR}/goto/goto.sh" "${HOME_DIR}/.local/bin/goto.sh"
 	print_success "Goto setup complete"
+
+	# Codex skills setup
+	print_status "Setting up Codex skills..."
+	mkdir -p "${HOME_DIR}/.codex"
+	install_codex_skills
+	print_success "Codex skills setup complete"
 
 	# Mise setup
 	install_mise
