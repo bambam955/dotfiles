@@ -1,5 +1,5 @@
 source /usr/lib/git-core/git-sh-prompt || true
-export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(__git_ps1 " (%s)")\[\033[00m\] \\$ '
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(__git_ps1 " (%s)")\[\033[00m\] \n\\$ '
 
 # Set up local tooling
 source "${HOME}/.local/bin/goto.sh" || true

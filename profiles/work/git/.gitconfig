@@ -3,3 +3,5 @@
 	name = Bennett Moore
 [push]
 	autoSetupRemote = true
+[color]
+	ui = auto
