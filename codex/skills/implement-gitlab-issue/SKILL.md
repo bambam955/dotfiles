@@ -62,6 +62,7 @@ Turn a GitLab issue into a reviewed merge request. Start from the issue, build o
   `## Summary`
   `## Testing`
   - The testing steps should be in checklist form so that reviewers can make clear to an author what worked and didn't work for them.
+  - If the repo contains MR templates, select the one that fits the code you've added. ALWAYS PREFER TEMPLATES OVER CUSTOM STRUCTURE.
 - Create a draft MR instead of a ready MR when validation is incomplete or open questions remain.
 
 ## Operating Rules
@@ -80,4 +81,4 @@ Turn a GitLab issue into a reviewed merge request. Start from the issue, build o
 - Validation covers the changed behavior well enough for the repository.
 - The branch name follows `<issue-id>-<kebab-case-issue-title>`.
 - Every commit uses Conventional Commits.
-- The branch is pushed and the MR description includes `## Summary` and `## Testing`.
+- The branch is pushed and the MR description includes `## Summary` and `## Testing`, or follows the MR template in the repo.
