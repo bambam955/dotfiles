@@ -1,11 +1,1 @@
-[user]
-	email = bennett.moore@mrs-electronics.com
-	name = Bennett Moore
-[push]
-	autoSetupRemote = true
-[color]
-	ui = auto
-[core]
-	excludesfile = ~/.gitignore_global
-[init]
-	defaultBranch = main
+.gitconfig##class.work

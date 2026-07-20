@@ -1,0 +1,7 @@
+[user]
+	name = Bennett Moore
+	email = bennett@bemoore.life
+[push]
+	autoSetupRemote = true
+[core]
+       excludesfile = ~/.gitignore_global

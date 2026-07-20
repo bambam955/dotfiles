@@ -1,13 +1,1 @@
-# Local Mise config
-mise.local.toml
-.miserc.toml
-
-# VSCode config files
-.vscode/*
-
-# Git worktrees
-.worktrees/
-
-# oh-my-openagent
-.omo/
-
+.gitignore_global##class.work
