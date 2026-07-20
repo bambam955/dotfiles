@@ -1,0 +1,1 @@
+/home/bennett-moore/projects/personal/dotfiles/git/git-completion.bash

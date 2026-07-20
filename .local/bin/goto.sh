@@ -1,0 +1,1 @@
+/home/bennett-moore/projects/personal/dotfiles/goto/goto.sh
