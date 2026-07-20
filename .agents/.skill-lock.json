@@ -1,0 +1,96 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-05-27T17:53:22.086Z",
+      "updatedAt": "2026-05-27T17:53:32.599Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "pluginName": "example-skills",
+      "installedAt": "2026-05-27T17:54:35.654Z",
+      "updatedAt": "2026-05-27T17:54:35.654Z"
+    },
+    "opensource-guide-coach": {
+      "source": "xixu-me/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/xixu-me/skills.git",
+      "skillPath": "skills/opensource-guide-coach/SKILL.md",
+      "skillFolderHash": "6943777ea46711c2812ddcd0182776977f5f8d20",
+      "installedAt": "2026-05-27T17:57:27.938Z",
+      "updatedAt": "2026-05-27T17:57:27.938Z"
+    },
+    "git-advanced-workflows": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/developer-essentials/skills/git-advanced-workflows/SKILL.md",
+      "skillFolderHash": "b64f19edd9b744658a0be5b93b1569d9d0c4c619",
+      "installedAt": "2026-05-27T17:59:30.112Z",
+      "updatedAt": "2026-05-27T17:59:30.112Z"
+    },
+    "discuss-design": {
+      "source": "bambam955/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/bambam955/skills.git",
+      "skillPath": "skills/workflow/discuss-design/SKILL.md",
+      "skillFolderHash": "541219d4bda4443f17fb8789557280f63f25bb13",
+      "installedAt": "2026-06-05T19:18:48.971Z",
+      "updatedAt": "2026-06-05T19:18:48.971Z"
+    },
+    "gitlab-mr": {
+      "source": "bambam955/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/bambam955/skills.git",
+      "skillPath": "skills/workflow/gitlab-mr/SKILL.md",
+      "skillFolderHash": "87f9831dc1b1628b2291d63c1937c5e672be1e88",
+      "installedAt": "2026-06-05T19:18:48.973Z",
+      "updatedAt": "2026-06-05T19:18:48.973Z"
+    },
+    "handoff": {
+      "source": "bambam955/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/bambam955/skills.git",
+      "skillPath": "skills/workflow/handoff/SKILL.md",
+      "skillFolderHash": "849b9cf7b8df67fa85ae594b1a6d75a5838c4bba",
+      "installedAt": "2026-06-05T19:18:48.982Z",
+      "updatedAt": "2026-06-05T19:18:48.982Z"
+    },
+    "moon": {
+      "source": "hyperb1iss/moonrepo-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/hyperb1iss/moonrepo-skill.git",
+      "skillPath": "skills/moon/SKILL.md",
+      "skillFolderHash": "652dcfcac75e1e2f9fdce2635f665fa7043bfb0e",
+      "installedAt": "2026-06-08T17:10:58.642Z",
+      "updatedAt": "2026-06-08T17:10:58.642Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
+}

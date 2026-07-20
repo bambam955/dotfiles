@@ -1,0 +1,151 @@
+model = "gpt-5.4-mini"
+model_reasoning_effort = "low"
+plan_mode_reasoning_effort = "high"
+approvals_reviewer = "user"
+approval_policy = "on-request"
+sandbox_mode = "danger-full-access"
+suppress_unstable_features_warning = true
+service_tier = "default"
+
+[projects."/home/bennett-moore/projects/internal/dev-hub"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer/bambauer-yocto-os"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer/bambauer-docs"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer/display-app"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/open-source/mrs-sdk-qt"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer2/power-pack"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer/power-pack-display"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/internal/code-challenges/christmas-tree"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer2/pump-display"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer/freezes"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/embedded/linux/SW19044_MRS-Yocto-display"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/embedded/linux/mconn-warrior"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/personal/dotfiles"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer2/ci-images"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/Downloads"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer/pump-display"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/j-and-m/14-series"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/docs/product-docs"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/manifests"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/bambauer/yocto-os"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/internal/ci-images"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/open-source/mrs-electronics.dev"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/personal/skills"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/personal/skills-cli"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/Downloads/data-files"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/gitlab-profile"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/meta-mrs"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/meta-neuralplex"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/repos/meta-mrs"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/repos/meta-neuralplex"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/sdk/qt"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/repos"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/repos/manifests"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/ci/docker"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/yocto/buildspace"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/spoke-zone/spoke-zone-client"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/ci/components/code-quality"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/ci/components"]
+trust_level = "trusted"
+
+[projects."/home/bennett-moore/projects/sdk/qt-test"]
+trust_level = "trusted"
+
+[tui]
+status_line = ["model-with-reasoning", "git-branch", "context-used", "five-hour-limit", "project-root", "weekly-limit"]
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 2
+
+[notice]
+hide_full_access_warning = true
+fast_default_opt_out = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.4" = "gpt-5.5"
+
+[features]
+multi_agent = true
+goals = true
+terminal_resize_reflow = true
+prevent_idle_sleep = true
+memories = true
+

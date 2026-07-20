@@ -1,0 +1,57 @@
+[tools]
+actionlint = "latest"
+bats = "latest"
+bun = "latest"
+codex = "latest"
+dua = "latest"
+flutter = "3.38.9-stable"
+fzf = "latest"
+git-cliff = "latest"
+github-cli = "latest"
+"gitlab:gitlab-org/cli" = "latest"
+go = "latest"
+"go:github.com/specture-system/specture" = "latest"
+golangci-lint = "latest"
+hadolint = "latest"
+jq = "latest"
+just = "latest"
+lychee = "latest"
+markdownlint-cli2 = "latest"
+node = "26.5"
+"npm:@colbymchenry/codegraph" = "latest"
+"npm:@moonrepo/cli" = "latest"
+"npm:ccusage" = "latest"
+"npm:skills" = "1.5"
+opencode = "latest"
+packer = "latest"
+pipx = "latest"
+"pipx:clang-format" = "18"
+"pipx:cmakelang" = { version = "latest", extras = "yaml" }
+"pipx:conan" = "latest"
+"pipx:kas" = "5.4"
+"pipx:oelint-adv" = "9.9"
+"pipx:pre-commit" = "latest"
+prettier = "latest"
+ripgrep = "latest"
+ruby = "latest"
+ruff = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+tmux = "latest"
+usage = "latest"
+uv = "latest"
+yamlfmt = "latest"
+yamllint = "latest"
+yq = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["flutter"]
+
+[settings.pipx]
+uvx = true
+
+[settings.ruby]
+compile = false
+
+[env]
+GOBIN = ""
