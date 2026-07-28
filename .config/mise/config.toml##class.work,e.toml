@@ -1,6 +1,5 @@
 [tools]
 actionlint = "latest"
-bats = "latest"
 bun = "latest"
 codex = "latest"
 dua = "latest"
@@ -29,7 +28,7 @@ pipx = "latest"
 "pipx:cmakelang" = { version = "latest", extras = "yaml" }
 "pipx:conan" = "latest"
 "pipx:kas" = "5.4"
-"pipx:oelint-adv" = "9.9"
+"pipx:oelint-adv" = "9.10"
 "pipx:pre-commit" = "latest"
 prettier = "latest"
 ripgrep = "latest"
