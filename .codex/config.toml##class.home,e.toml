@@ -1,0 +1,187 @@
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+plan_mode_reasoning_effort = "high"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+network_access = "enabled"
+
+[projects."/home/bennett"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/capstone/bizrush"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/cps449-coil/UD-CPS449-COILPROJECT.github.io"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/cps449-mooreb26"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/family-story/family-story"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/cps449-project2/bambam955.bitbucket.io"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/cps449-project2"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/cps449-coil/COIL"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/personal/to"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/capstone/site"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/capstone"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/school/secad-teamproject"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/personal/home"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/personal/docker-astro-lint"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/firstfruitslabs/family-story/family-story"]
+trust_level = "trusted"
+
+[projects."/home/bennett/projects/firstfruitslabs/bible-ref/bible-ref-parser-js"]
+trust_level = "trusted"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "context-used", "five-hour-limit", "project-root", "git-branch", "weekly-limit"]
+
+[tui.model_availability_nux]
+"gpt-5.3-codex-spark" = 4
+"gpt-5.5" = 4
+
+[notice]
+hide_world_writable_warning = true
+hide_full_access_warning = true
+fast_default_opt_out = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.4" = "gpt-5.5"
+
+[features]
+goals = true
+unified_exec = true
+multi_agent = true
+plugin_hooks = true
+plugins = true
+
+[agents]
+max_threads = 1000
+
+[features.multi_agent_v2]
+max_concurrent_threads_per_session = 1000
+
+[marketplaces.sisyphuslabs]
+last_updated = "2026-07-10T04:39:47Z"
+source_type = "local"
+source = "/home/bennett/.codex/plugins/cache/sisyphuslabs"
+
+[plugins."omo@sisyphuslabs"]
+enabled = true
+
+[plugins."omo@sisyphuslabs".mcp_servers.context7]
+enabled = true
+
+[plugins."omo@sisyphuslabs".mcp_servers.codegraph]
+enabled = true
+
+[plugins."omo@sisyphuslabs".mcp_servers.git_bash]
+enabled = false
+
+[hooks.state."omo@sisyphuslabs:hooks/session-start-loading-project-rules.json:session_start:0:0"]
+trusted_hash = "sha256:85a435163476662e839cee217e518697331c7e1aa11222959d5e2160559b46b0"
+
+[hooks.state."omo@sisyphuslabs:hooks/session-start-recording-session-telemetry.json:session_start:0:0"]
+trusted_hash = "sha256:83637d30cb79e7c07f87e9f56c1d3eacf0536c7230edbe732a26e6b941597fd0"
+
+[hooks.state."omo@sisyphuslabs:hooks/session-start-checking-auto-update.json:session_start:0:0"]
+trusted_hash = "sha256:5e083dcb9aecb4faa0647358f7ac3d90c21ab029603c9c569e852246007266b8"
+
+[hooks.state."omo@sisyphuslabs:hooks/session-start-checking-bootstrap-provisioning.json:session_start:0:0"]
+trusted_hash = "sha256:48a97f17fb74732df3db261b03a0dd498b07f4914a4a152c9dd00fb7ea101fa7"
+
+[hooks.state."omo@sisyphuslabs:hooks/session-start-checking-codegraph-bootstrap.json:session_start:0:0"]
+trusted_hash = "sha256:91c7f48e785b8a4781a714fac703b71d173e6eb80de4ab8660de4515f8ec56c9"
+
+[hooks.state."omo@sisyphuslabs:hooks/user-prompt-submit-loading-project-rules.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:b8cce192c670ca5d998089f6a6cf7da637f16325d0a31dca6bb54333ac442b34"
+
+[hooks.state."omo@sisyphuslabs:hooks/user-prompt-submit-checking-ultrawork-trigger.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:f0fbdd117f03fd76a136e334d8d4f979516eb3b18c473f9e57a6cad500b7e705"
+
+[hooks.state."omo@sisyphuslabs:hooks/user-prompt-submit-checking-ulw-loop-steering.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:2475de1fa62a63743b6e8da8da77f784fa2a7b2aed85e517c056dc3de50d38c1"
+
+[hooks.state."omo@sisyphuslabs:hooks/pre-tool-use-enforcing-unlimited-goal-budget.json:pre_tool_use:0:0"]
+trusted_hash = "sha256:95424cf38db0ba35c21d3981bb4d7a5cd4975c4134abc8edac276925b98cef2e"
+
+[hooks.state."omo@sisyphuslabs:hooks/post-tool-use-checking-comments.json:post_tool_use:0:0"]
+trusted_hash = "sha256:3667c9287577c0b11d6d6da00ea5865b1b341983f0ad21e8c1e1c942d608c5a4"
+
+[hooks.state."omo@sisyphuslabs:hooks/post-tool-use-checking-lsp-diagnostics.json:post_tool_use:0:0"]
+trusted_hash = "sha256:e3f945343c11e8e39d26a0b6d3822c66f3ae04e79e1deb53eb79b7d46adb1ebb"
+
+[hooks.state."omo@sisyphuslabs:hooks/post-tool-use-checking-codegraph-init-guidance.json:post_tool_use:0:0"]
+trusted_hash = "sha256:9c1995ea3f20a7ed8077502be7bb69be0eae3a60249c9180e721aac2e6957a1e"
+
+[hooks.state."omo@sisyphuslabs:hooks/post-tool-use-matching-project-rules.json:post_tool_use:0:0"]
+trusted_hash = "sha256:80c619dc35f37b6b9551f85df49c80b64642a41b522ccd383e492f58ef36e68e"
+
+[hooks.state."omo@sisyphuslabs:hooks/post-tool-use-checking-thread-title-hygiene.json:post_tool_use:0:0"]
+trusted_hash = "sha256:b9de1b5f90573aee52ddc64e8d047ed73634a373e9f1a371077db596581b460a"
+
+[hooks.state."omo@sisyphuslabs:hooks/post-compact-resetting-project-rule-cache.json:post_compact:0:0"]
+trusted_hash = "sha256:cac19c389a8d9f8e1fc532499af46dcadc115860e448264a4f774373ac88f804"
+
+[hooks.state."omo@sisyphuslabs:hooks/post-compact-resetting-lsp-diagnostics-cache.json:post_compact:0:0"]
+trusted_hash = "sha256:6ec89a81dbb3675f54c80ec6566e593845ea428d51c37f283c4aa464518a3742"
+
+[hooks.state."omo@sisyphuslabs:hooks/stop-checking-start-work-continuation.json:stop:0:0"]
+trusted_hash = "sha256:2d1b390010be0b9ab4cc619eb2d74ddb9f017640a3963c34c5b1bff2d5ab7aa9"
+
+[hooks.state."omo@sisyphuslabs:hooks/subagent-stop-checking-start-work-continuation.json:subagent_stop:0:0"]
+trusted_hash = "sha256:f056bb66596ccc980ab880fb45388f122cc505a9601235df63aed14f0a9466b9"
+
+[hooks.state."omo@sisyphuslabs:hooks/subagent-stop-verifying-lazycodex-executor-evidence.json:subagent_stop:0:0"]
+trusted_hash = "sha256:68598334edab67b73323cb46392b0f18e7e18e374576967dd0f11eb7b20a4086"
+
+[agents.explorer]
+config_file = "./agents/explorer.toml"
+
+[agents.lazycodex-clone-fidelity-reviewer]
+config_file = "./agents/lazycodex-clone-fidelity-reviewer.toml"
+
+[agents.lazycodex-code-reviewer]
+config_file = "./agents/lazycodex-code-reviewer.toml"
+
+[agents.lazycodex-executor]
+config_file = "./agents/lazycodex-executor.toml"
+
+[agents.lazycodex-gate-reviewer]
+config_file = "./agents/lazycodex-gate-reviewer.toml"
+
+[agents.lazycodex-qa-executor]
+config_file = "./agents/lazycodex-qa-executor.toml"
+
+[agents.librarian]
+config_file = "./agents/librarian.toml"
+
+[agents.metis]
+config_file = "./agents/metis.toml"
+
+[agents.momus]
+config_file = "./agents/momus.toml"
+
+[agents.plan]
+config_file = "./agents/plan.toml"
