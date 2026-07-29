@@ -1,1 +1,1 @@
-/home/bennett-moore/.config/agents/AGENTS.md
+../.config/agents/AGENTS.md
