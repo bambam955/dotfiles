@@ -1,3 +1,9 @@
 # Local Mise config
 mise.local.toml
 .miserc.toml
+
+# Git worktrees
+.worktrees/
+
+# oh-my-openagent
+.omo/
