@@ -32,7 +32,7 @@
       "variant": "high"
     },
     "metis": {
-      "model": "openrouter/minimax/minimax-m2.5",
+      "model": "openrouter/google/gemini-2.5-flash-lite",
       "variant": "high"
     },
     "momus": {
@@ -69,7 +69,7 @@
       "model": "opencode/big-pickle"
     },
     "unspecified-low": {
-      "model": "openrouter/minimax/minimax-m2.5"
+      "model": "openrouter/google/gemini-2.5-flash-lite"
     },
     "unspecified-high": {
       "model": "openai/gpt-5.5",
