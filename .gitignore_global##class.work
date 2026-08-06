@@ -11,3 +11,5 @@ mise.local.toml
 # oh-my-openagent
 .omo/
 
+# codegraph DB
+.codegraph/
