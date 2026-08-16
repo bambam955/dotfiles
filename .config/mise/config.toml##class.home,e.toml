@@ -25,6 +25,8 @@ rclone = "latest"
 "npm:skills" = "latest"
 "npm:corepack" = "latest"
 "npm:@moonrepo/cli" = "latest"
+imagemagick = "latest"
+lychee = "latest"
 
 [env]
 GOBIN = ""
