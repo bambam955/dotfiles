@@ -7,3 +7,7 @@ mise.local.toml
 
 # oh-my-openagent
 .omo/
+
+# Playwright
+.playwright-mcp/
+
