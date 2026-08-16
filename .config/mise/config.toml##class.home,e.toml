@@ -27,6 +27,7 @@ rclone = "latest"
 "npm:@moonrepo/cli" = "latest"
 imagemagick = "latest"
 lychee = "latest"
+"npm:@colbymchenry/codegraph" = "latest"
 
 [env]
 GOBIN = ""

@@ -11,3 +11,5 @@ mise.local.toml
 # Playwright
 .playwright-mcp/
 
+# Codegraph
+.codegraph/
