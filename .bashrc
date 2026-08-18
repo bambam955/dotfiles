@@ -124,6 +124,12 @@ alias rebash="source ~/.bashrc"
 alias j="goto"
 alias e="xdg-open"
 
+up() {
+    sudo apt update && sudo apt full-upgrade
+    mise self-update
+    mise up --bump --interactive
+}
+
 # Apps
 alias t="time-tracker"
 alias astudio="/opt/android-studio/bin/studio >/dev/null 2>&1 &"
@@ -175,7 +181,11 @@ gam() {
 gph() {
     local branch
     branch="$(branchname)" || true
-    git push origin "${branch}"
+    if [[ "$#" -ne 0 ]]; then
+	git push "$*" origin "${branch}"
+    else
+        git push origin "${branch}"
+    fi
 }
 gphf() {
     gph --force-with-lease
@@ -188,7 +198,7 @@ gah() {
 }
 
 gm() {
-    git merge -m "chore: merge branch '$1' into $(branchname)" $1
+    git merge -m "chore: merge branch '$1' into '$(branchname)'" "$1"
 }
 
 # Delete all local branches that don't exist on the remote
