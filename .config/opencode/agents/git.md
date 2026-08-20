@@ -1,7 +1,7 @@
 ---
 description: Perform Git operations
 mode: subagent
-model: openrouter/deepseek/deepseek-v4-flash
+model: opencode/deepseek-v4-flash-free
 temperature: 0.1
 ---
 
