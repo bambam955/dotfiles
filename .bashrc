@@ -128,6 +128,7 @@ up() {
     sudo apt update && sudo apt full-upgrade
     mise self-update
     mise up --bump --interactive
+    mise prune -y
 }
 
 # Apps
