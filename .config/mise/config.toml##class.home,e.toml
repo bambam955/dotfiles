@@ -28,6 +28,7 @@ rclone = "latest"
 imagemagick = "latest"
 lychee = "latest"
 "npm:@colbymchenry/codegraph" = "latest"
+"go:gitlab.com/mrs-electronics/dx/time-tracker" = "latest"
 
 [env]
 GOBIN = ""
