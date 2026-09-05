@@ -18,7 +18,7 @@ jq = "latest"
 just = "latest"
 lychee = "latest"
 markdownlint-cli2 = "latest"
-node = "26.7"
+node = "26.8"
 "npm:@colbymchenry/codegraph" = "latest"
 "npm:@moonrepo/cli" = "latest"
 "npm:ccusage" = "latest"
@@ -29,8 +29,8 @@ pipx = "latest"
 "pipx:clang-format" = "22"
 "pipx:cmakelang" = { version = "latest", extras = "yaml" }
 "pipx:conan" = "latest"
-"pipx:kas" = "5.4"
-"pipx:oelint-adv" = "9.10"
+"pipx:kas" = "5.5"
+"pipx:oelint-adv" = "9.11"
 "pipx:pre-commit" = "latest"
 prettier = "latest"
 ripgrep = "latest"
@@ -47,12 +47,19 @@ yq = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["flutter"]
+cache_prune_age = "7d"
 
 [settings.pipx]
 uvx = true
 
 [settings.ruby]
 compile = false
+
+[settings.npm]
+package_manager = "npm"
+
+[settings.status]
+show_tools = true
 
 [env]
 GOBIN = ""
