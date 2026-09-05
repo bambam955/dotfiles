@@ -131,6 +131,12 @@ up() {
     mise prune -y
 }
 
+# Copy pasta
+alias c='xclip -selection clipboard -rmlastnl'
+ct() {
+    echo "$*" | c
+}
+
 # Apps
 alias t="time-tracker"
 alias astudio="/opt/android-studio/bin/studio >/dev/null 2>&1 &"
@@ -140,8 +146,8 @@ alias astudio="/opt/android-studio/bin/studio >/dev/null 2>&1 &"
 #########################################################
 
 # Function to get the working branch in a git repository
-branchname() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/' || true
+branch() {
+    git branch --show-current
 }
 
 # Basic git aliases
@@ -169,9 +175,7 @@ __git_complete gm _git_merge
 
 # Functions for more complicated git operations
 gp() {
-    local branch
-    branch="$(branchname)" || true
-    git pull origin "${branch}"
+    git pull origin "$(branch)"
 }
 gcm() {
     git commit -m "$*"
@@ -181,7 +185,7 @@ gam() {
 }
 gph() {
     local branch
-    branch="$(branchname)" || true
+    branch="$(branch)" || true
     if [[ "$#" -ne 0 ]]; then
 	git push "$*" origin "${branch}"
     else
@@ -199,7 +203,7 @@ gah() {
 }
 
 gm() {
-    git merge -m "chore: merge branch '$1' into '$(branchname)'" "$1"
+    git merge -m "chore: merge branch '$1' into '$(branch)'" "$1"
 }
 
 # Delete all local branches that don't exist on the remote
