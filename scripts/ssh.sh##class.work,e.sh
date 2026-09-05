@@ -28,5 +28,6 @@ else
   ip_prefix="${mconn_ip_mask}"
   
   # MConns always have the password "mrsroot". https://mconn.dev/1_Getting_Started/Setting_up_MConn.html
+  ssh-keygen -f "$HOME/.ssh/known_hosts" -R "${ip_prefix}.$1" >/dev/null
   sshpass -p "mrsroot" ssh -o StrictHostKeyChecking=no ${ssh_user_name}@${ip_prefix}.$1
 fi
