@@ -140,6 +140,8 @@ ct() {
 # Apps
 alias t="time-tracker"
 alias astudio="/opt/android-studio/bin/studio >/dev/null 2>&1 &"
+alias oc="opencode"
+alias oca='opencode attach --dir . http://localhost:4096'
 
 #########################################################
 # -------------------- GIT ALIASES -------------------- #
@@ -251,6 +253,7 @@ source "${HOME}/.local/bin/goto.sh" || true
 eval "$(mise activate --shims bash)" || true
 eval "$(fzf --bash)" || true
 eval "$(just --completions bash)" || true
+eval "$(wt config shell init bash)" || true
 
 # Set up Golang PATH dir
 gopath="$(go env GOPATH)" && [[ -n $gopath && ":$PATH:" != *":$gopath/bin:"* ]] && PATH="$gopath/bin:$PATH" && unset gopath
